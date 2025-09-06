@@ -37,7 +37,7 @@ const app = express();
 app.use(express.json({ limit: '10mb' }));
 app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)({
-    origin: process.env.NEXT_PUBLIC_BASE_URL || 'https://tech-blog-frontend-3-git-8bf154-ahmed-hassans-projects-96c42d63.vercel.app',
+    origin: process.env.NEXT_PUBLIC_BASE_URL || 'https://tech-blog-frontend-git-main-ahmed-hassans-projects-96c42d63.vercel.app/',
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization", "withCredentials", "x-session-id"]
