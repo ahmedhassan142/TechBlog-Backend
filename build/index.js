@@ -33,7 +33,6 @@ const subscriptionroute_1 = __importDefault(require("./routes/subscriptionroute"
 // Load environment variables
 dotenv_1.default.config();
 const app = express();
-const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json({ limit: '10mb' }));
 app.use((0, cookie_parser_1.default)());
@@ -46,9 +45,6 @@ app.use((0, cors_1.default)({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const STORAGE_FILE = path_1.default.join(__dirname, 'storage.json');
-// Middleware
-app.use((0, cors_1.default)({ origin: process.env.FRONTEND_URL || 'http://localhost:3000' }));
-app.use(express.json());
 // Helper function to read subscribers from JSON file
 const readSubscribers = () => {
     try {
