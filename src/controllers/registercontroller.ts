@@ -2,7 +2,7 @@ import crypto from "crypto";
 import { Request, Response } from "express";
 import { User, validateRegister } from "../models/usermodel.js";
 import { Token } from "../models/token.js";
-import { sendEmail } from "@/utils/sendEmail.js";
+import { sendEmail } from "../utils/sendEmail.js";
 
 interface RegisterRequestBody {
   firstName: string;

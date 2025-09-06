@@ -1,15 +1,15 @@
 // src/routes/blogRoutes.ts
 const express=require("express")
 import { Request, Response } from 'express';
-import Blog from '@/models/Blog';
+import Blog from '../models/Blog';
 import { v2 as cloudinary } from 'cloudinary';
 import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import CategoryModel from '../models/Category';
-import { toggleLike,getLikes } from '@/controllers/Likecontroller';
-import { authorize } from '@/middleware/authmiddleware';
-import { getComments,deleteComment,likeComment,addComment,approveComment } from '@/controllers/Commentcontroller';
+import { toggleLike,getLikes } from '../controllers/Likecontroller';
+import { authorize } from '../middleware/authmiddleware';
+import { getComments,deleteComment,likeComment,addComment,approveComment } from '../controllers/Commentcontroller';
 
 dotenv.config();
 const router = express.Router();

@@ -3,7 +3,7 @@
 import { Request, Response } from "express";
 import { User } from "../models/usermodel.js";
 import { Token } from "../models/token.js";
-import { sendEmail } from "@/utils/sendEmail.js";
+import { sendEmail } from "../utils/sendEmail.js";
 import crypto from "crypto";
 
 export const verifyEmail = async (req: Request, res: Response) => {

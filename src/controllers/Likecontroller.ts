@@ -3,7 +3,7 @@ import { Response } from 'express';
 import { AuthRequest } from '../utils/types';
 import Blog from '../models/Blog';
 import { ApiResponse } from '../utils/types';
-import { User } from '@/models/usermodel';
+import { User } from '../models/usermodel';
 import jwt from 'jsonwebtoken';
 
 interface JwtPayload {
